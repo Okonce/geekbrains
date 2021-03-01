@@ -119,6 +119,7 @@ Four — 4
 
 Подсказка: использовать менеджеры контекста.
 '''
+print('mhbmbkjb')
 
 import json
 with open('/Users/assimarakhimbekova/PycharmProjects/geekbrains/lesson_5/task7.txt', 'r') as file, open("my_file.json", "w") as write_f:
