@@ -31,3 +31,4 @@ while True:
         except ValueError as err:
             print(err)
 
+# Я запуталась с этими классами-исключениями =(

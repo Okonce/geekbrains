@@ -34,3 +34,4 @@ class Scaner(Orgtexnica):
 class Xerox(Orgtexnica):
     ...
 
+
