@@ -15,7 +15,6 @@ class MyException(Exception):
         self.input_data = input_data
 
 l = []
-numbers = [str(x) for x in range(10)]
 
 while True:
     input_data = input('Введите: ')
@@ -24,11 +23,11 @@ while True:
         break
     else:
         try:
-            if input_data in numbers:
+            if input_data.isnumeric():
                 l.append(int(input_data))
             else:
                 raise MyException('invalid literal for int()')
-        except ValueError as err:
+        except MyException as err:
             print(err)
 
 # Я запуталась с этими классами-исключениями =(
