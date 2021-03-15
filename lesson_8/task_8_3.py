@@ -9,3 +9,25 @@
  Класс-исключение должен не позволить пользователю ввести текст (не число) и отобразить соответствующее сообщение.
  При этом работа скрипта не должна завершаться.
 '''
+
+class MyException(Exception):
+    def __init__(self, input_data):
+        self.input_data = input_data
+
+l = []
+numbers = [str(x) for x in range(10)]
+
+while True:
+    input_data = input('Введите: ')
+    if input_data == 'stop':
+        print(l)
+        break
+    else:
+        try:
+            if input_data in numbers:
+                l.append(int(input_data))
+            else:
+                raise MyException('invalid literal for int()')
+        except ValueError as err:
+            print(err)
+
